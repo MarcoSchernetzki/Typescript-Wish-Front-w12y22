@@ -1,3 +1,14 @@
+import { Layout } from '../layout/layout';
+import { AppRoutes } from '../routes/routes';
+
 export function App() {
-    return <p>Hola mundo</p>;
+    return (
+        <Layout>
+            <>
+                {' '}
+                <p>cuenta</p>
+                <AppRoutes />
+            </>
+        </Layout>
+    );
 }
