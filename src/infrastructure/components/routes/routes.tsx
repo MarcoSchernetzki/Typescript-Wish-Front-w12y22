@@ -1,13 +1,18 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { HomePage } from '../../../feature/pages/homePage/home.page';
+import InspoPage from '../../../feature/pages/inspo.page/inspo.page';
+import LoginPage from '../../../feature/pages/login.page/login.page';
 import RegisterPage from '../../../feature/pages/registerPage/register.page';
 
 export function AppRoutes() {
     return (
         <Routes>
+            <Route path="inspo" element={<InspoPage />}></Route>
             <Route path="home" element={<HomePage />}></Route>
             <Route path="register" element={<RegisterPage />}></Route>
-            <Route path="*" element={<Navigate replace to="home" />}></Route>
+            <Route path="login" element={<LoginPage />}></Route>
+            <Route path="" element={<LoginPage />}></Route>
+            <Route path="*" element={<Navigate replace to="" />}></Route>
         </Routes>
     );
 }
