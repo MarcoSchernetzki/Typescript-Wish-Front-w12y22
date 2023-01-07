@@ -1,5 +1,5 @@
-import { useUsers } from '../../../features/users/hook/use.users';
 import { useNavigate } from 'react-router-dom';
+import { useUsers } from '../../../feature/users/hook/use.users';
 import './header.css';
 
 export function Header() {

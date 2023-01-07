@@ -3,7 +3,7 @@ import { Header } from './header';
 import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
-import { mockStore } from '../../mock/mock.store';
+import { mockStore } from '../../../mock/mock.store';
 
 describe('Given header component', () => {
     describe('When we render the component', () => {
