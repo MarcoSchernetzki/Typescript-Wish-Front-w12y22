@@ -3,33 +3,33 @@ import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router-dom';
 import { appStore } from '../../../infrastructure/store/store';
-import CreateForm from './create.form';
+import UpdateForm from './update.form';
 
 describe('Given the create.form component', () => {
-    test('It should display «cancelar» button', () => {
+    test('It should update a user after clicking in «guardar» button', () => {
         render(
             <Router>
                 <Provider store={appStore}>
-                    <CreateForm />
+                    <UpdateForm />
                 </Provider>
             </Router>
         );
-        const firstTextInput = screen.getByPlaceholderText('Nombre');
+        const firstTextInput = screen.getByText('Cancelar');
         expect(firstTextInput).toBeInTheDocument();
-        userEvent.click(screen.getByText(/cancelar/i));
+        fireEvent.input(screen.getByPlaceholderText(/name/i));
+        userEvent.click(screen.getByText(/guardar/i));
     });
 
-    test('It should display «guardar» button', () => {
+    test('It should cancel and go home', () => {
         render(
             <Router>
                 <Provider store={appStore}>
-                    <CreateForm />
+                    <UpdateForm />
                 </Provider>
             </Router>
         );
-        const element = screen.getByText(/guardar/i);
+        const element = screen.getByText(/cancelar/i);
         expect(element).toBeInTheDocument();
-        fireEvent.click(screen.getByText('Guardar'));
-        fireEvent.input(screen.getByPlaceholderText('Nombre'));
+        userEvent.click(screen.getByText(/cancelar/i));
     });
 });
