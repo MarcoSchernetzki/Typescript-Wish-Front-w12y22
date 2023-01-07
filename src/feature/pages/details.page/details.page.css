@@ -1,0 +1,33 @@
+.buttonReturn {
+    width: 20rem;
+    height: 2.5rem;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: none;
+    border-radius: 50px;
+    border: solid #ffffff 2px;
+}
+
+.buttonDelete,
+.buttonUpdate,
+.buttonBuy,
+.buttonComeTrue {
+    width: 9.375rem;
+    height: 2.5rem;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: none;
+    border-radius: 50px;
+    border: solid #ffffff 2px;
+}
+
+.divImg {
+    width: 150px;
+    height: 150px;
+}
+
+.img {
+    width: 100%;
+}
