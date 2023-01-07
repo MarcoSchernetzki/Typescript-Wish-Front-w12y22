@@ -6,7 +6,7 @@ import { appStore } from '../../../infrastructure/store/store';
 import CreateForm from './create.form';
 
 describe('Given the create.form component', () => {
-    beforeEach(() => {
+    test('It should display «cancelar» button', () => {
         render(
             <Router>
                 <Provider store={appStore}>
@@ -14,15 +14,19 @@ describe('Given the create.form component', () => {
                 </Provider>
             </Router>
         );
-    });
-
-    test('It should display «cancelar» button', () => {
         const firstTextInput = screen.getByPlaceholderText('Nombre');
         expect(firstTextInput).toBeInTheDocument();
         userEvent.click(screen.getByText(/cancelar/i));
     });
 
     test('It should display «guardar» button', () => {
+        render(
+            <Router>
+                <Provider store={appStore}>
+                    <CreateForm />
+                </Provider>
+            </Router>
+        );
         const element = screen.getByText(/guardar/i);
         expect(element).toBeInTheDocument();
         fireEvent.click(screen.getByText('Guardar'));
