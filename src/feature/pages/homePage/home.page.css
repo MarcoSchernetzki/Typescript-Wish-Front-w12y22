@@ -1,0 +1,31 @@
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttonAdd {
+    width: 9.375rem;
+    height: 2.5rem;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: #5ccb5f;
+    border-radius: 50px;
+    border: none;
+}
+
+.buttonInspo {
+    width: 9.375rem;
+    height: 2.5rem;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: none;
+    border-radius: 50px;
+    border: solid #ffffff 2px;
+}
