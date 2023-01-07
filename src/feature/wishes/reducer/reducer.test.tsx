@@ -147,7 +147,7 @@ describe('Given the function wishReducer', () => {
                 type: actionTypes.comeTrue,
                 payload: true,
             };
-            state = { wishes: mock, selectedWish: mock[0] as WishI };
+            state = { wishes: mock, selectedWish: mock[0] };
         });
         test('Then the returned state should include the action payload', () => {
             const result = wishReducer(state, action);
