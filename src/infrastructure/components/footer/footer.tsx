@@ -1,4 +1,4 @@
-import { useUsers } from '../../../features/users/hook/use.users';
+import { useUsers } from '../../../feature/users/hook/use.users';
 import styles from './footer.module.css';
 
 export function Footer() {

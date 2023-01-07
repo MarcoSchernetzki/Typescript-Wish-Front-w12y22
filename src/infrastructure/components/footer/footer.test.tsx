@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Footer } from './footer';
 import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router-dom';
-import { mockStore } from '../../mock/mock.store';
+import { mockStore } from '../../../mock/mock.store';
 
 describe('Given footer component', () => {
     describe('When we render the component', () => {
