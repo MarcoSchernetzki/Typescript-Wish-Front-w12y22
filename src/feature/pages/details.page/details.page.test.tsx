@@ -108,6 +108,8 @@ describe('Given details.page component', () => {
                 );
                 const element = screen.getByText(/lista/i);
                 expect(element).toBeInTheDocument();
+                userEvent.click(screen.getByPlaceholderText(/inspiracion/i));
+                userEvent.click(screen.getByPlaceholderText(/lista/i));
             });
         });
     });

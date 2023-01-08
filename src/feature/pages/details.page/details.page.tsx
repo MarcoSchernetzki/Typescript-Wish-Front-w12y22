@@ -18,6 +18,7 @@ function DetailsPage() {
 
                     <button
                         className="buttonReturn"
+                        placeholder="inspiracion"
                         onClick={() => {
                             navigate('/inspo');
                         }}
@@ -26,6 +27,7 @@ function DetailsPage() {
                     </button>
                     <button
                         className="buttonReturn"
+                        placeholder="lista"
                         onClick={() => {
                             navigate('/home');
                         }}
