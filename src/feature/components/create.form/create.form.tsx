@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useUsers } from '../../users/hook/use.users';
 import { useWishes } from '../../wishes/hook/use.wishes';
 import { WishI } from '../../wishes/model/wish';
+import '../../pages/homePage/home.page.css';
 
 export function CreateForm() {
     const navigate = useNavigate();
@@ -75,8 +76,11 @@ export function CreateForm() {
                     />
                 </label>
                 <label>
-                    <button type="submit">Guardar</button>
+                    <button className="buttonAdd" type="submit">
+                        Guardar
+                    </button>
                     <button
+                        className="buttonInspo"
                         onClick={() => {
                             navigate('/home');
                         }}
