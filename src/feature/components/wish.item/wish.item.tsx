@@ -12,6 +12,7 @@ export function WishItem({ item }: { item: WishI }) {
                     src={item.image}
                     alt={item.name}
                     width="150px"
+                    height="150px"
                     onClick={(e) => {
                         e.preventDefault();
                         handleSelect(item);

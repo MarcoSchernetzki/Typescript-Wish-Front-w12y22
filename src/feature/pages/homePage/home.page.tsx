@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { WishesList } from '../../components/wishes.list/wishes.list';
 import './home.page.css';
 
 export function HomePage() {
@@ -26,7 +27,9 @@ export function HomePage() {
                     </button>
                 </div>
                 <h1 className="titulo">Tu lista de deseos</h1>
-                <div></div>
+                <div>
+                    <WishesList />
+                </div>
             </main>
         </>
     );

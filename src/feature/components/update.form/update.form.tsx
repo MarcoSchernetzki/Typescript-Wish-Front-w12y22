@@ -93,18 +93,3 @@ export function UpdateForm() {
 }
 
 export default UpdateForm;
-
-/*
-                        onClick={(e) => {
-                            e.preventDefault();
-                            handleUpdate(
-                                wishes.selectedWish?.id as string,
-                                updateFormState as WishI,
-                                users.token as string
-                            );
-                            // handleGet(users.user?.id as string);
-                            if (users.isLogged) {
-                                navigate('/home');
-                            }
-                        }}
-                        */

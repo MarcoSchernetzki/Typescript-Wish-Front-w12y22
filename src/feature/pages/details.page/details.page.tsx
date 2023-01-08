@@ -41,7 +41,7 @@ function DetailsPage() {
                     ></img>
                     <div>{wishes.selectedWish?.name}</div>
                     <div>{wishes.selectedWish?.comments}</div>
-                    <div>{wishes.selectedWish?.price}</div>
+                    <div>{wishes.selectedWish?.price}€</div>
                 </main>
             </>
         );
@@ -64,7 +64,7 @@ function DetailsPage() {
                 ></img>
                 <div>{wishes.selectedWish?.name}</div>
                 <div>{wishes.selectedWish?.comments}</div>
-                <div>{wishes.selectedWish?.price}</div>
+                <div>{wishes.selectedWish?.price}€</div>
                 <button
                     className="buttonDelete"
                     onClick={(e) => {
