@@ -1,5 +1,6 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { appStore } from '../../../infrastructure/store/store';
 import { WishI } from '../model/wish';
 import { WishRepository } from '../service/wish.repository';
@@ -21,11 +22,10 @@ const wishMock: { wish: WishI; token: string } = {
     token: '123',
 };
 
-const mockNavigate = jest.fn();
 jest.mock('../service/wish.repository');
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
-    useNavigate: () => mockNavigate,
+    useNavigate: jest.fn(),
 }));
 
 let result: {
@@ -75,6 +75,7 @@ describe('Given useUsers', () => {
                 result.current.handleAdd(wishMock.wish, wishMock.token);
             });
             expect(WishRepository.prototype.create).toHaveBeenCalled();
+            expect(useNavigate).toHaveBeenCalled();
         });
     });
 
