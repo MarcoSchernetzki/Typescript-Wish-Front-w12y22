@@ -153,6 +153,25 @@ describe('Given the function wishReducer', () => {
             const result = userReducer(state, action);
             expect(result).toEqual(newState);
         });
+        test('Then the returned state should be the action payload', () => {
+            const mockWishTwo = {
+                id: '2',
+                name: 'WishOne',
+            };
+            action = {
+                type: actionTypes.updateWish,
+                payload: mockWishTwo,
+            };
+
+            state = {
+                user: mock,
+                token: 'token',
+                isLogged: false,
+            };
+
+            const result = userReducer(state, action);
+            expect(result.user?.myWishes[0].name).toEqual('WishOne');
+        });
     });
 
     describe('When the action is deleteWish', () => {
