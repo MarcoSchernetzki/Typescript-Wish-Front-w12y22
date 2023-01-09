@@ -37,6 +37,7 @@ export const useWishes = () => {
             .then((wish) => {
                 dispatcher(ac.addActionCreator(wish.wishes));
                 dispatcher(addWishActionUser(wish.wishes));
+                navigate('/home');
             })
             .catch((error: Error) => console.log(error.name, error.message));
     };
@@ -51,6 +52,7 @@ export const useWishes = () => {
             .then((wish: WishI) => {
                 dispatcher(ac.updateActionCreator(wish));
                 dispatcher(updateWishActionUser(wish));
+                navigate('/home');
             })
             .catch((error: Error) => console.log(error.name, error.message));
     };
