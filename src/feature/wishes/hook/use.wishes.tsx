@@ -37,7 +37,6 @@ export const useWishes = () => {
             .then((wish) => {
                 dispatcher(ac.addActionCreator(wish.wishes));
                 dispatcher(addWishActionUser(wish.wishes));
-                navigate('/home');
             })
             .catch((error: Error) => console.log(error.name, error.message));
     };
@@ -62,6 +61,7 @@ export const useWishes = () => {
             .then((dataId) => {
                 dispatcher(ac.deleteActionCreator(dataId));
                 dispatcher(deleteWishActionUser(dataId));
+                navigate('/home');
             })
             .catch((error: Error) => console.log(error.name, error.message));
     };
