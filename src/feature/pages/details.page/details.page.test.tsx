@@ -43,6 +43,7 @@ describe('Given details.page component', () => {
             const element = screen.getByText(/lista/i);
             expect(element).toBeInTheDocument();
             userEvent.click(screen.getByText(/Editar/i));
+            userEvent.click(screen.getByText(/comprar/i));
         });
         test('Then it should display «loading»', () => {
             const preloadedState: Partial<rootState> = {};
