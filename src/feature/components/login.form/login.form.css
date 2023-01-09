@@ -11,3 +11,7 @@ input {
     outline: none;
     background: transparent;
 }
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;}

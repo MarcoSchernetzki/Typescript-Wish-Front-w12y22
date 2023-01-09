@@ -2,6 +2,7 @@ import { SyntheticEvent, useState } from 'react';
 import { useUsers } from '../../users/hook/use.users';
 import { ProtoUserI } from '../../users/model/user';
 import './login.form.css';
+import '../../pages/homePage/home.page.css';
 
 export function LoginForm() {
     const { handleLogin } = useUsers();
@@ -45,7 +46,9 @@ export function LoginForm() {
                 />
             </label>
             <label>
-                <button type="submit">Entrar</button>
+                <button className="buttonAdd" type="submit">
+                    Entrar
+                </button>
             </label>
         </form>
     );
